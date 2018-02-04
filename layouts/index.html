@@ -1,0 +1,22 @@
+{{ partial "head" . }}
+  <body>
+    <div id="wrap">
+      {{ partial "header" . }}
+      <section id="about">
+        <div class="container">
+        <div class="avatar">
+          <img class="img-circle" src="{{ .Site.BaseURL }}img/{{ .Site.Params.avatar }}" alt="Responsive image">
+        </div>
+        <h3>I'm <strong>{{ .Site.Params.author }}</strong>, a Published Author, Editor and Musician.</h3>
+        <p>My first novel, <i>Oh go to the Devil</i> is available for download on iTunes now.</p>
+        {{ partial "ibookslink" }}
+        <p>You can read about my next novel, <i>Laowai</i> and other works<a href="{{ .Site.BaseURL }}projects/"> here</a>.</p>
+        <p>View my academic and professional <a href="https://demo.nurlan.co/hugo-vitae/">resume</a>.</p>
+        <p>Contact me by <a href="mailto:{{ .Site.Params.Social.Email }}">email</a>.</p>
+        {{ partial "social.html" . }}
+        </div>
+      </section>
+    </div>
+    {{ partial "footer" . }}
+  </body>
+</html>
